@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Darumadrop+One&family=Playpen+Sans:wght@500&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #242424;
+    font-family: 'Playpen Sans', serif;
+}
+
+.mainbody {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator-grid {
+    display: grid;
+    border: 10px solid grey;
+    border-radius: 1rem;
+    margin-top: 5rem;
+    grid-template-columns: repeat(4, 6rem);
+    grid-template-rows: minmax(7rem, auto) repeat(5, 6rem);
+}
+
+.calculator-grid > button {
+    cursor: pointer;
+    font-size: 2rem;
+    font-family: 'Playpen Sans', serif;
+    border: 1px solid white;
+    border-radius: 0.5rem;
+    margin: 0.2rem;
+    outline: none;
+    background-color: #ffffffbe;
+}
+
+.calculator-grid > button:hover,
+.calculator-grid > button:focus {
+    background-color: white;
+}
+
+.span-two {
+    grid-column: span 2;
+}
+
+.output {
+    grid-column: 1 / -1 ;   /* this means the grid item span from the first column line to the last column line of the grid container */
+    background-color: #00000097;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;  /*this makes the numbers stick to the right-side*/
+    justify-content: space-around;
+    padding: .5rem;
+    word-wrap: break-word;
+    word-break: break-all;  /*to wrap the line to next line*/
+    border-radius: 0.5rem;
+}
+
+.output .previous-operand {
+    color: rgba(255, 255, 255, 0.518);
+    font-size: 1.5rem;
+    /* text-align: right; */
+
+}
+
+.output .current-operand{
+    color: white;
+    font-size: 2.5rem;
+    /* text-align: right; */
+}
